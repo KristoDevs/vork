@@ -1,0 +1,11 @@
+name: Email Content Notification
+type: module
+description: 'Create as many email notification reactions as needed in the website on content creation/updation.'
+package: Email Content Notification
+core: 8.x
+configure: content_notification.config
+
+# Information added by Drupal.org packaging script on 2019-11-19
+version: '8.x-1.0'
+project: 'content_notification'
+datestamp: 1574143388

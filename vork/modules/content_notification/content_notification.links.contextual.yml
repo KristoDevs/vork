@@ -1,0 +1,23 @@
+content_notification.edit_form:
+  title: Edit
+  group: content_notification
+  route_name: content_notification.edit_form
+  weight: 10
+
+content_notification.delete_form:
+  title: Delete
+  group: content_notification
+  route_name: content_notification.delete_form
+  weight: 20
+
+content_notification.enable_form:
+  title: Enable
+  group: content_notification
+  route_name: content_notification.enable_form
+  weight: 20
+
+content_notification.disable_form:
+  title: Disable
+  group: content_notification
+  route_name: content_notification.disable_form
+  weight: 20

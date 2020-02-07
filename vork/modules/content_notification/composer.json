@@ -1,0 +1,9 @@
+{
+  "name": "drupal/content_notification",
+  "description": "Enable Email Content Notification.",
+  "type": "drupal-module",
+  "license": "GPL-2.0",
+  "require": {
+    "drupal/core": "~8"
+  }
+}

@@ -1,0 +1,5 @@
+content_notification.add_form:
+  route_name: content_notification.add_form
+  title: 'Add Email content notificaton'
+  appears_on:
+    - content_notification.config

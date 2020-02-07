@@ -1,0 +1,3 @@
+administer email content notification config:
+  title: 'Administer email content notification settings'
+  restrict access: true

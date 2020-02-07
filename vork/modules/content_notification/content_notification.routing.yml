@@ -1,0 +1,57 @@
+content_notification.config:
+  path: '/admin/content/content-notification'
+  defaults: { _controller: '\Drupal\content_notification\Controller\ContentNotificationController::getContentNotificationList' }
+  requirements:
+   _permission: 'administer email content notification config'
+
+content_notification.add_form:
+  path: '/admin/content/content-notification/add'
+  defaults:
+    _controller: '\Drupal\content_notification\Controller\ContentNotificationController::addForm'
+    _title: 'Add Email content notificaton'
+  requirements:
+    _permission: 'administer email content notification config'
+
+content_notification.edit_form:
+  path: '/admin/content/content-notification/{notification}/edit'
+  defaults:
+    _controller: '\Drupal\content_notification\Controller\ContentNotificationController::editForm'
+    _title: 'Edit Email content notificaton'
+  options:
+    _admin_route: TRUE
+  requirements:
+    _permission: 'administer email content notification config'
+    notification: \d+
+
+content_notification.delete_form:
+  path: '/admin/content/content-notification/{notification}/delete'
+  defaults:
+    _controller: '\Drupal\content_notification\Controller\ContentNotificationController::deleteForm'
+    _title: 'Delete Email content notificaton'
+  options:
+    _admin_route: TRUE
+  requirements:
+    _permission: 'administer email content notification config'
+    taxonomy_term: \d+
+
+content_notification.enable_form:
+  path: '/admin/content/content-notification/{notification}/enable'
+  defaults:
+    _controller: '\Drupal\content_notification\Controller\ContentNotificationController::enableForm'
+    _title: 'Enable Email content notificaton'
+  options:
+    _admin_route: TRUE
+  requirements:
+    _permission: 'administer email content notification config'
+    taxonomy_term: \d+
+
+content_notification.disable_form:
+  path: '/admin/content/content-notification/{notification}/disable'
+  defaults:
+    _controller: '\Drupal\content_notification\Controller\ContentNotificationController::disableForm'
+    _title: 'Disable Email content notificaton'
+  options:
+    _admin_route: TRUE
+  requirements:
+    _permission: 'administer email content notification config'
+    taxonomy_term: \d+

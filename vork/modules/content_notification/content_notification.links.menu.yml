@@ -1,0 +1,5 @@
+content_notification.config:
+  title: 'Email Content Notification Configuration'
+  description: 'Admin Settings for module Email Content Notification.'
+  route_name: content_notification.config
+  parent: system.admin_content

@@ -1,0 +1,48 @@
+<?php
+
+/**
+ * @file
+ * Module File, consist all related hooks.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_help().
+ */
+function content_notification_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.content_notification':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module can be used to create as many email notification reactions as needed in the website on content creation/updation') . '</p>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+function content_notification_entity_insert(EntityInterface $entity) {
+  \Drupal::service('content_notification.common')->contentNotificationProcess($entity, 'insert');
+}
+
+/**
+ * Implements hook_entity_update().
+ */
+function content_notification_entity_update(EntityInterface $entity) {
+  \Drupal::service('content_notification.common')->contentNotificationProcess($entity, 'update');
+}
+
+/**
+ * Implements hook_mail().
+ */
+function content_notification_mail($key, &$message, $params) {
+  switch ($key) {
+    case 'content_notification_key':
+      $message['subject'] = $params['subject'];
+      $message['body'][] = $params['body'];
+      break;
+  }
+}

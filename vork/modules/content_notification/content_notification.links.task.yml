@@ -1,0 +1,4 @@
+content_notification.config:
+  title: Manage Email Content Notification
+  route_name: content_notification.config
+  base_route: system.admin_content
